@@ -1,5 +1,4 @@
 package app
-<<<<<<< HEAD
 
 import (
 	"net/http"
@@ -54,5 +53,3 @@ func (a *App) routes() http.Handler {
 	// userRoutes.Use(AuthMiddleware())
 	return r
 }
-=======
->>>>>>> bd3a36c591bd590609f477457d6e266c02a6b81c

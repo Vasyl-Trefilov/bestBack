@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package repository
 
 import (
@@ -22,6 +21,3 @@ func NewPostgresDB(configDB string) (*sqlx.DB, error) {
 
 	return db, nil
 }
-=======
-package postgres
->>>>>>> bd3a36c591bd590609f477457d6e266c02a6b81c

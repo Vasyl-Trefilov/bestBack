@@ -1,6 +1,5 @@
 package main
 
-<<<<<<< HEAD
 import (
 	"fmt"
 	"os"
@@ -38,12 +37,4 @@ func main() {
 	if err != nil {
 		fmt.Println("Error running app:", err)
 	}
-=======
-import "github.com/gin-gonic/gin"
-
-func main() {
-	r := gin.Default()
-	r.Run()
-
->>>>>>> bd3a36c591bd590609f477457d6e266c02a6b81c
 }
