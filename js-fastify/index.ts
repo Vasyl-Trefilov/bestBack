@@ -3,7 +3,7 @@ import Fastify from "fastify";
 import { PrismaClient } from "./prisma/generated/prisma/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
 
-const fastify = Fastify({ logger: true });
+const fastify = Fastify({ logger: false });
 
 const adapter = new PrismaPg({ connectionString: process.env["DATABASE_URL"] });
 const prisma = new PrismaClient({ adapter });
@@ -15,6 +15,17 @@ fastify.get("/users", async function (_req, res) {
   } catch (e) {
     console.log(e);
     res.status(500).send({ error: "Database fetch error" });
+  }
+});
+
+fastify.post("/user", async function (req, res) {
+  const { name, email } = req.body;
+  try {
+    const user = await prisma.users.create({ data: { name, email } });
+    res.status(201).send({ user });
+  } catch (e) {
+    console.log(e);
+    res.status(500).send({ error: "User creation error" });
   }
 });
 
