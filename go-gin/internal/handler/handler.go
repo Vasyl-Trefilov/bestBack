@@ -1,4 +1,5 @@
 package handler
+<<<<<<< HEAD
 
 import (
 	"github.com/Vasyl-Trefilov/bestBack/internal/service"
@@ -26,3 +27,5 @@ func (h *Handler) HealthCheck(ctx *gin.Context) {
 func (h *Handler) HaavyRoute(ctx *gin.Context) {
 	// heavy math
 }
+=======
+>>>>>>> bd3a36c591bd590609f477457d6e266c02a6b81c
